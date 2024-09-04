@@ -1,0 +1,282 @@
+/* general settings */
+
+html, body{
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Futura PT Cond';
+    margin: 0;
+    padding: 0;
+    font-size: 0.69vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+.content{
+    width: 984px;
+
+}
+
+.site{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* header */
+
+nav{
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between  ;
+    flex-direction: row;
+    width: 984px;
+    height: 24px;
+}
+
+nav div ul{
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    list-style-type: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+nav div ul a{
+    font-size: 24px;
+    font-weight: 450;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: left;
+    opacity: 0.4;
+    color: #ffffff;
+
+}
+
+
+nav div ul a:nth-child(1) {
+    opacity: 1;
+}
+
+
+nav div a{
+    display: flex;
+    align-items: center;
+}
+
+nav div a:nth-child(1) img {
+    width: 16.49px;
+    height: 15.81px;
+}
+
+nav div a:nth-child(3) img {
+    width: 24px;
+    height: 24px;
+}
+
+/* great product */
+
+.great_product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+    height: 64px;
+
+    gap: 12px;
+}
+
+.great_product div{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 89%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.great_product div p:nth-child(2){
+    opacity: 0.6;
+}
+
+.great_product button{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #fff;
+
+    background: #ff4000;
+    border-radius: 48px;
+    width: 67px;
+    height: 32px;
+    outline: 0;
+    border: 0;
+}
+
+/* about us */
+
+.about_us{
+
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.about_us h1{
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 89%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+
+.about_us p{
+    width: 756px;
+
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    opacity: 0.6;
+
+    margin: 0;
+}
+
+/* map */
+
+.map{
+    margin-top: 95px;
+    display: flex;
+}
+
+.map div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 245px;
+    height: 64px;
+    border-bottom: 2px solid #ffffff ;
+    opacity: 0.3;
+}
+
+.map p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 89%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.map div:nth-child(1){
+    border-bottom: 2px solid #ff4001;
+    opacity: 1;
+}
+
+.map div:nth-child(1) p{
+    color: #ff4000;
+}
+
+/* slider */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-top: 64px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    
+    border-radius: 16px;
+    padding: 24px 16px;
+    width: 312px;
+    height: 551px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.6);
+    background: #1d1d1d;
+}
+
+.swiper-slide div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.swiper-slide div:nth-child(1) img {
+    width: 64px;
+    height: 64px;
+}
+
+.swiper-slide div:nth-child(1) p {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    opacity: 0.6;
+}
+
+
+.swiper-slide div:nth-child(2){
+    display: flex;
+}
+
+.swiper-slide div:nth-child(2) img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+/* adaptive
+@media (max-width: 1024px){
+    .content{
+        width: 9.84rem;
+    }
+
+
+
+} */
