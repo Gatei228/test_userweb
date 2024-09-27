@@ -66,12 +66,15 @@ nav div ul a{
     text-align: left;
     opacity: 0.4;
     color: #ffffff;
+}
 
+nav div ul a:nth-child(1){
+    opacity: 1;
 }
 
 
 nav div ul a:hover {
-    opacity: 1;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -196,8 +199,8 @@ nav .menu > a:last-of-type img {
 
 .btn-2:link,
 .btn-2:visited {
-    margin-top: 190px;
-    margin-bottom: 60px;
+    margin-top: 160px;
+    margin-bottom: 120px;
     width: 338px;
     height: 50px;
     font-size: 18px;
@@ -274,14 +277,14 @@ nav .menu > a:last-of-type img {
     display: flex;
 }
 
-.map div{
+.map > div{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 245px;
     height: 64px;
-    border-bottom: 2px solid #ffffff ;
-    opacity: 0.3;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    
 }
 
 .map p {
@@ -293,12 +296,18 @@ nav .menu > a:last-of-type img {
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
+    opacity: 0.3;
+    
 }
 
-.map div:hover{
+
+.map div:hover p{
     opacity: 1;
     transition: 0.5s;
 }
+
+
 
 
 
@@ -307,22 +316,23 @@ nav .menu > a:last-of-type img {
 
 .swiper-container {
     width: 984px;
-    height: 680px;
+    height: 635px;
     margin-top: 64px;
     position: relative;
     display: none;
 }
 
-.swiper-container.swiper_yandexmap{
-    display: block;
+.box-swiper{
+    height: 744px;
+    width: 984px;
 }
 
 .swiper_anim_back {
-    animation: moveInSwiper_back 0.5s forwards;
+    animation: moveInSwiper_back 0.3s forwards;
 }
 
 .swiper_anim_forward {
-    animation: moveInSwiper_forward 0.5s forwards;
+    animation: moveInSwiper_forward 0.3s forwards;
 }
 
 @keyframes moveInSwiper_back {
@@ -346,13 +356,6 @@ nav .menu > a:last-of-type img {
         transform: translateX(0px);
     }
 }
-
-
-
-
-
-
-
 
 .card{
     padding: 24px 16px;
@@ -431,7 +434,6 @@ nav .menu > a:last-of-type img {
     color: #fff;
     opacity: 0.6;
     margin: 0;
-    
 }
 
 .swiper-slide .card div:nth-child(5) p{
@@ -445,6 +447,15 @@ nav .menu > a:last-of-type img {
     margin: 0;
 }
 
+.swiper-slide .card div:nth-child(6){
+    height: 24px;
+    font-size: 0;
+}
+
+.swiper-slide .card div:nth-child(6) img{
+    height: 24px;
+}
+
 .swiper-button-next{
     background-image: url(img/swiper-button-next.svg);
     width: 64px;
@@ -455,6 +466,8 @@ nav .menu > a:last-of-type img {
     position: absolute;
     top: 195px;
     right: -32px;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .swiper-button-prev{
@@ -467,19 +480,23 @@ nav .menu > a:last-of-type img {
     position: absolute;
     top: 195px;
     left: -32px;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
-.swiper-button-next,
-.swiper-button-prev {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+    opacity: 0.4;
+    transition: 0.3s;
 }
 
-.swiper-button-next:hover {
-    transform: scale(1.1);
+.swiper-container:hover .swiper-button-next:hover,
+.swiper-container:hover .swiper-button-prev:hover {
+    opacity: 1;
+    transition: 0.3s;
 }
 
-.swiper-button-prev:hover{
-    transform: scale(1.1);
-}
+
 
 
 /* leave_a_review */
@@ -606,12 +623,22 @@ nav .menu > a:last-of-type img {
     
     .swiper-container {
         margin-top: 1.6rem;
+        height: 63.5rem;
     }
     
     .card {
         padding: 2.4rem 1.6rem;
-        margin-right: 2.4rem;
+        margin-right: 0rem;
     }
+
+    .swiper-slide:last-child {
+        margin-right: 2.4rem; /* Увеличенный отступ для последней карточки */
+    }
+    
+    .swiper-slide:not(:last-child) {
+        margin-right: 0; /* Отключаем отступ для всех, кроме последней карточки */
+    }
+
     
     .swiper-slide .card {
         border-radius: 1.6rem;
@@ -644,13 +671,32 @@ nav .menu > a:last-of-type img {
     .swiper-slide .card div:nth-child(5) p {
         font-size: 1.2rem;
     }
+
     .swiper-slide .card div:nth-child(6) img {
         width: 14.4rem;
         height: 2.4rem;
+        font-size: 0;
+    }
+    
+    .swiper-slide .card div:nth-child(6){
+        width: 14.4rem;
+        height: 2.4rem;
+        font-size: 0;
     }
     
     .swiper-button-next, .swiper-button-prev {
-        display: none;
+        display: none !important;
+    }
+    .swiper-container:hover .swiper-button-next,
+    .swiper-container:hover .swiper-button-prev {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .swiper-container:hover .swiper-button-next:hover,
+    .swiper-container:hover .swiper-button-prev:hover {
+        opacity: 0;
+        transition: 0.3s;
     }
     
     .leave_a_review {
@@ -670,15 +716,15 @@ nav .menu > a:last-of-type img {
     .btn-2:link,
     .btn-2:visited {
         font-family: "Open Sans";
-        font-size: 1.2rem; /* 12px / 10 */
+        font-size: 1.2rem; 
         font-weight: 600;
         line-height: 100%;
         letter-spacing: -0.02em;
         text-decoration: none;
-        border-radius: 10rem; /* 100px / 10 */
+        border-radius: 10rem; 
         transition: all .2s;
-        width: 6.7rem; /* 67px / 10 */
-        height: 3.2rem; /* 32px / 10 */
+        width: 6.7rem; 
+        height: 3.2rem; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -688,21 +734,21 @@ nav .menu > a:last-of-type img {
 
     .btn-2:link,
     .btn-2:visited {
-        margin-top: 16rem; /* 160px / 10 */
-        margin-bottom: 5rem; /* 50px / 10 */
-        width: 33.8rem; /* 338px / 10 */
-        height: 5rem; /* 50px / 10 */
-        font-size: 1.8rem; /* 18px / 10 */
+        margin-top: 12rem;
+        margin-bottom: 5rem; 
+        width: 33.8rem; 
+        height: 5rem;
+        font-size: 1.8rem;
     }
 
     .btn:hover, .btn-2:hover {
-        transform: translateY(-0.3rem); /* -3px / 10 */
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* 10px и 20px / 10 */
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
     }
 
     .btn:active, .btn-2:active {
-        transform: translateY(-0.1rem); /* -1px / 10 */
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* 5px и 10px / 10 */
+        transform: translateY(-0.1rem); 
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
     }
 
     .btn::after {
